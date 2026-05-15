@@ -1,10 +1,9 @@
 package main;
 
 import entity.Player;
-import tile.TileManager;
-
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
+import tile.TileManager;
 
 public class GamePanel extends JPanel implements Runnable {
 

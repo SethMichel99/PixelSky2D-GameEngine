@@ -1,13 +1,11 @@
 package tile;
 
-import main.GamePanel;
-
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import javax.imageio.ImageIO;
+import main.GamePanel;
 
 public class TileManager {
     GamePanel gp;
@@ -134,7 +132,7 @@ public class TileManager {
         while (worldRow < gp.maxWorldRow) {
             int tileNum = mapTileNum[worldRow][worldCol];
 
-            int worldX = worldCol * gp.tileSize; // worldX = EX if worldCol[50] * gp.pilzesize(48) = 2400 X cords ((CURRENT TILE SIZE))
+            int worldX = worldCol * gp.tileSize; // worldX = EX if worldCol[50] * gp.tilesize(48) = 2400 X cords ((CURRENT TILE SIZE))
             int worldY = worldRow * gp.tileSize; // ex row 25 x pixelsize(48) = 1200 Y cords ((CURRENT TILE SIZE)
             int screenX = worldX - gp.player.worldX + gp.player.screenX; // screenX = tile position(2308) - player position in world(spawn 2208) = 100 + player position on screen spawn (384) = 484px, be drawn here in relevenacy to player screen.
             int screenY = worldY - gp.player.worldY + gp.player.screenY; //does same thing screenX does except for Y axis
